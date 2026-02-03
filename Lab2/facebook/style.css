@@ -1,0 +1,195 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 80px;
+    padding: 20px;
+}
+
+.brand-section {
+    max-width: 500px;
+    margin-bottom: 100px;
+}
+
+#logo {
+    height: 106px;
+    margin-left: -20px;
+}
+
+.text p {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #1c1e21;
+    margin-top: -10px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-page {
+    background-color: white;
+    width: 396px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.email, .password {
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+}
+
+.email input, .password input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 17px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #0866ff;
+    color: white;
+    height: 48px;
+    font-size: 20px;
+}
+
+.forget-pass {
+    display: block;
+    text-align: center;
+    color: #0866ff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.create-acc {
+    background-color: #42b72a;
+    color: white;
+    height: 48px;
+    width: auto;
+    padding: 0 16px;
+    margin: 0 auto;
+    display: block;
+    font-size: 17px;
+}
+
+.create-page-text {
+    font-size: 14px;
+    margin-top: 28px;
+    color: #1c1e21;
+}
+
+.footer-box {
+    background-color: white;
+    padding: 40px 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+.lang a, .footer-help a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #8a8d91;
+    margin: 0 10px;
+}
+
+#copyright {
+    color: #737373;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.footer-box {
+    background-color: white;
+    padding: 20px 0;
+    margin-top: auto; 
+    text-align: left; 
+}
+
+.footer-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.lang, .footer-links {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px 15px;
+}
+
+.lang a, .footer-links a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #8a8d91;
+}
+
+.lang a:hover, .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    border-top: 1px solid #dddfe2;
+    margin: 10px 0;
+}
+
+#copyright {
+    font-size: 11px;
+    margin-top: 20px;
+    color: #737373;
+    display: block;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.plus-btn {
+    background-color: #f5f6f7;
+    border: 1px solid #dddfe2;
+    color: #4b4f56;
+    font-size: 16px; 
+    font-weight: bold;
+    
+    width: 24px;
+    height: 20px;
+    
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.plus-btn:hover {
+    background-color: #ebedf0;
+}
