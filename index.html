@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple DApp</title>
+</head>
+<body>
+
+<h2>Message Board</h2>
+
+<p id="currentMessage">Loading...</p>
+
+<input type="text" id="newMessage" placeholder="Enter new message">
+<button onclick="updateMessage()">Update Message</button>
+
+<button onclick="connectWallet()">Connect MetaMask</button>
+
+<script src="./ethers.umd.min.js"></script>
+
+<script>
+
+let contract;
+let signer;
+
+const contractAddress = "0x8F789D57F74Bcd5069B30c5F747C4875596b7E54";
+
+const abi = [
+    "function message() view returns (string)",
+    "function updateMessage(string _newMessage)"
+];
+
+async function connectWallet() {
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    signer = provider.getSigner();
+
+    contract = new ethers.Contract(contractAddress, abi, signer);
+
+    loadMessage();
+}
+
+async function loadMessage() {
+    const msg = await contract.message();
+    document.getElementById("currentMessage").innerText = msg;
+}
+
+async function updateMessage() {
+    const newMsg = document.getElementById("newMessage").value;
+    const tx = await contract.updateMessage(newMsg);
+    await tx.wait();
+    loadMessage();
+}
+
+</script>
+
+</body>
+</html>

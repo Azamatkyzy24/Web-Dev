@@ -102,12 +102,6 @@ button[type="submit"] {
     color: #1c1e21;
 }
 
-.footer-box {
-    background-color: white;
-    padding: 40px 0;
-    margin-top: auto;
-    text-align: center;
-}
 
 .lang a, .footer-help a {
     text-decoration: none;
