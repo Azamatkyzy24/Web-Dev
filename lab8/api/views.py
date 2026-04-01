@@ -4,9 +4,7 @@ from .models import Product, Category
 
 def products_list(request):
     products = Product.objects.all()
-    # limit = request.GET.get('lim')
-    #  if limit:
-    #     products = products[:int(limit)]
+
     data = [
         {
             'id': product.id,
