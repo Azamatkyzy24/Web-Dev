@@ -1,7 +1,6 @@
 from django.http import JsonResponse
 from .models import Product, Category
 
-
 def products_list(request):
     products = Product.objects.all()
 
@@ -13,12 +12,14 @@ def products_list(request):
             'description': product.description,
             'count': product.count,
             'is_active': product.is_active,
-            'category': product.category.id
+            'category':{
+                'id': product.category.id,
+                'name': product.category.name
+            }
         }
         for product in products
     ]
     return JsonResponse(data, safe=False)
-
 
 def product_detail(request, id):
     try:
